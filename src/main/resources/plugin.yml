@@ -1,0 +1,7 @@
+name: SuperAuthLastLocation
+version: ${project.version}
+main: xyz.theprogramsrc.lastlocation.LastLocation
+api-version: 1.13
+authors: [ TheProgramSrc ]
+description: A way to send your users to their last location after the auth.
+depend: [ SuperAuth ]
