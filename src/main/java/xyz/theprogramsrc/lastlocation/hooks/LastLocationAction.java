@@ -63,7 +63,7 @@ public class LastLocationAction implements SuperAuthAction, Listener {
     }
 
     private String str(Location loc){
-        return String.format("%s;%s;%s;%s;%s;%S", loc.getWorld(), loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+        return String.format("%s;%s;%s;%s;%s;%S", loc.getWorld().getName(), loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
     }
 
     private Location loc(String str){
