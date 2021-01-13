@@ -114,8 +114,9 @@
         <dependency>
             <groupId>xyz.theprogramsrc</groupId>
             <artifactId>SuperAuth</artifactId>
-            <version>3.8.3</version>
+            <version>3.8.4</version>
             <scope>system</scope>
+            <!-- This means that you need to add SuperAuth.jar to the lib folder -->
             <systemPath>${project.basedir}/lib/SuperAuth.jar</systemPath>
         </dependency>
     </dependencies>

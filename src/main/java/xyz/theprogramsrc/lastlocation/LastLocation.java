@@ -6,12 +6,25 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 import xyz.theprogramsrc.lastlocation.hooks.SuperAuthHook;
 
+import java.io.File;
+import java.io.IOException;
+
 public class LastLocation extends JavaPlugin {
 
     @Override
     public void onLoad() {
         if(Bukkit.getPluginManager().getPlugin("SuperAuth") == null){
             Bukkit.getConsoleSender().sendMessage(c("&cThis Plugin was designed as extension of &bSuperAuth &7https://songoda.com/marketplace/products/255"));
+        }else{
+            if(!this.getDataFolder().exists()) this.getDataFolder().mkdir();
+            File config = new File(this.getDataFolder(), "config.yml");
+            if(!config.exists()){
+                try{
+                    config.createNewFile();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
